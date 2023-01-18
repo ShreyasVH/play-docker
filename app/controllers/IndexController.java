@@ -6,7 +6,7 @@ import play.mvc.Http;
 
 public class IndexController extends Controller
 {
-	public Result get(String input)
+	public Result get(Http.Request request, String input)
 	{
 		return ok("GET REQUEST with input: " + input);
 	}
@@ -21,7 +21,7 @@ public class IndexController extends Controller
 		return ok("PUT REQUEST with payload: " + request.body().asJson().toString());
 	}
 
-	public Result delete()
+	public Result delete(Http.Request request)
 	{
 		return ok("DELETE REQUEST");
 	}
