@@ -1,0 +1,12 @@
+version: '3'
+services:
+  play-docker-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "9011:9000"
+    volumes:
+      - .:/app
+      - /app/target
+    container_name: play-docker-dev
