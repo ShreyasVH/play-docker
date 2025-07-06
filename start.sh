@@ -1,1 +1,1 @@
-sbt "run 9011"
+docker compose -p ${COMPOSE_PROJECT_NAME} -f docker-compose-dev.yml up --force-recreate
