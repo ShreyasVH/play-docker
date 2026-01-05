@@ -14,7 +14,7 @@ RUN unzip target/universal/${REPO_NAME}-${REPO_VERSION}.zip && mv ${REPO_NAME}-$
 # ----------------------------------------------------------------
 
 # Runtime stage
-FROM openjdk:11-slim
+FROM eclipse-temurin:11.0.19_7-jdk-jammy
 
 WORKDIR /app/
 
