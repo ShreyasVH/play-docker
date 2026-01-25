@@ -1,4 +1,4 @@
-FROM mozilla/sbt AS build
+FROM sbtscala/scala-sbt:eclipse-temurin-25.0.1_8_1.12.0_3.8.1 AS build
 
 WORKDIR /app/
 
