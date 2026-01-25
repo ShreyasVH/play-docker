@@ -1,4 +1,4 @@
-FROM mozilla/sbt AS build
+FROM sbtscala/scala-sbt:eclipse-temurin-25.0.1_8_1.12.0_3.8.1 AS build
 
 WORKDIR /app/
 
@@ -14,7 +14,7 @@ RUN unzip target/universal/${REPO_NAME}-${REPO_VERSION}.zip && mv ${REPO_NAME}-$
 # ----------------------------------------------------------------
 
 # Runtime stage
-FROM eclipse-temurin:11.0.19_7-jdk-jammy
+FROM eclipse-temurin:25.0.1_8-jdk-jammy
 
 WORKDIR /app/
 
