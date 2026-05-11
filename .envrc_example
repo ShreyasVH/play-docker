@@ -2,7 +2,7 @@ export COMPOSE_PROJECT_NAME=
 
 export PORT=
 
-# sbt 1.12.5 path
+# sbt 1.12.11 path
 export PATH=
 
 # java 25.0.2 path
