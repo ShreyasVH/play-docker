@@ -16,7 +16,7 @@ RUN unzip target/universal/${REPO_NAME}-${REPO_VERSION}.zip && mv ${REPO_NAME}-$
 # ----------------------------------------------------------------
 
 # Runtime stage
-FROM eclipse-temurin:27-jdk-alpine
+FROM eclipse-temurin:27-jre-alpine
 
 RUN apk add --no-cache bash
 
