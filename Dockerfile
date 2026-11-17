@@ -1,4 +1,4 @@
-FROM sbtscala/scala-sbt:eclipse-temurin-25.0.1_8_1.12.2_3.8.1 AS build
+FROM sbtscala/scala-sbt:eclipse-temurin-27_1.x AS build
 
 WORKDIR /app/
 
@@ -16,7 +16,9 @@ RUN unzip target/universal/${REPO_NAME}-${REPO_VERSION}.zip && mv ${REPO_NAME}-$
 # ----------------------------------------------------------------
 
 # Runtime stage
-FROM eclipse-temurin:25.0.1_8-jdk-jammy
+FROM eclipse-temurin:27-jdk-alpine
+
+RUN apk add --no-cache bash
 
 WORKDIR /app/
 
